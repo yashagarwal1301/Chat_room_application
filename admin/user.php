@@ -17,7 +17,6 @@
 <script>
 $(document).ready(function(){
 	
-	
 	$('#userList').DataTable({
 	"bLengthChange": true,
 	"bInfo": true,
@@ -46,7 +45,6 @@ $(document).ready(function(){
 					window.location.href='user.php';
 				}
 			});
-		
 	});
 	//
 	$(document).on('click', '.deleteuser', function(){
@@ -72,7 +70,6 @@ $(document).ready(function(){
 				}
 			});
 	});
-	
 	$(document).on('click', '.edituser', function(){
 		var rid=$(this).val();
 		var name=$('#ename'+rid).val();
@@ -84,7 +81,6 @@ $(document).ready(function(){
 		$('.modal-body #user_pass').val(password);
 		$('.modal-footer #confirm_update').val(rid);
 	});
-	
 	$(document).on('click', '#confirm_update', function(){
 		var nrid=$(this).val();
 		var nname=$('#user_name').val();
@@ -108,7 +104,6 @@ $(document).ready(function(){
 				}
 			});
 	});
- 
 });
 
 </script>	
