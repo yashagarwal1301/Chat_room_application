@@ -2,10 +2,8 @@
 <?php include('header.php'); ?>
 <?php
 	$id=$_REQUEST['id'];
-	
 	$chatq=mysqli_query($conn,"select * from chatroom where chatroomid='$id'");
 	$chatrow=mysqli_fetch_array($chatq);
-	
 	$cmem=mysqli_query($conn,"select * from chat_member where chatroomid='$id'");
 ?>
 <body>
@@ -17,15 +15,12 @@
 </div>
 <?php include('room_modal.php'); ?>
 <?php include('modal.php'); ?>
-
 <script src="../js/jquery.dataTables.min.js"></script>
 <script src="../js/dataTables.bootstrap.min.js"></script>
 <script src="../js/dataTables.responsive.js"></script>
 <script>
 $(document).ready(function(){
-
 	displayChat();
-	
 		$(document).on('click', '#send_msg', function(){
 			id = <?php echo $id; ?>;
 			if($('#chat_msg').val() == ""){
@@ -62,10 +57,8 @@ $(document).ready(function(){
 					success: function(){
 						window.location.href='index.php';
 					}
-				});
-				
+				});		
 		});
-		
 		$(document).on('click', '#confirm_delete', function(){
 			id = <?php echo $id; ?>;
 			$('#confirm_delete').modal('hide');
@@ -84,19 +77,16 @@ $(document).ready(function(){
 				});
 				
 		});
-		
 		$(document).keypress(function(e){
 			if (e.which == 13){
 			$("#send_msg").click();
 			}
 		});
-		
 		$("#user_details").hover(function(){
 			$('.showme').removeClass('hidden');
 		},function(){
 			$('.showme').addClass('hidden');
 		});
-		
 		//
 	$(document).on('click', '.delete2', function(){
 		var rid=$(this).val();
@@ -127,7 +117,6 @@ $(document).ready(function(){
 		$('#leave_room2').modal('show');
 		$('.modal-footer #confirm_leave2').val(rid);
 	});
-	
 	$(document).on('click', '#confirm_leave2', function(){
 		var nrid=$(this).val();
 		$('#leave_room2').modal('hide');
