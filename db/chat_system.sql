@@ -86,7 +86,6 @@ CREATE TABLE `user` (
   `photo` varchar(200) NOT NULL,
   `access` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 --
 -- Dumping data for table `user`
 --
@@ -99,7 +98,6 @@ INSERT INTO `user` (`userid`, `username`, `password`, `uname`, `photo`, `access`
 --
 -- Indexes for dumped tables
 --
-
 --
 -- Indexes for table `chat`
 --
@@ -117,17 +115,14 @@ ALTER TABLE `chatroom`
 --
 ALTER TABLE `chat_member`
   ADD PRIMARY KEY (`chat_memberid`);
-
 --
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`userid`);
-
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
 --
 -- AUTO_INCREMENT for table `chat`
 --
