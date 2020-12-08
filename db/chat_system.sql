@@ -19,9 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `chat_system`
 --
-
--- --------------------------------------------------------
-
+-- -------------------------------------------------------
 --
 -- Table structure for table `chat`
 --
@@ -47,22 +45,18 @@ CREATE TABLE `chatroom` (
   `chat_password` varchar(30) NOT NULL,
   `userid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 --
 -- Dumping data for table `chatroom`
 --
-
 INSERT INTO `chatroom` (`chatroomid`, `chat_name`, `date_created`, `chat_password`, `userid`) VALUES
 (1, 'My First Chat Room', '2017-09-11 13:20:18', 'leeann', 2),
 (2, 'Free Entrance :)', '2017-09-11 13:20:51', '', 3),
 (3, 'Admin Chat Room', '2017-09-11 13:21:24', '', 1);
 
 -- --------------------------------------------------------
-
 --
 -- Table structure for table `chat_member`
 --
-
 CREATE TABLE `chat_member` (
   `chat_memberid` int(11) NOT NULL,
   `chatroomid` int(11) NOT NULL,
