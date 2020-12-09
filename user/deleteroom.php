@@ -8,4 +8,5 @@
 		mysqli_query($conn,"delete from `chat` where chatroomid='$id'");
 		mysqli_query($conn,"delete from `chat_member` where chatroomid='$id'");
 	}
+	
 ?>
