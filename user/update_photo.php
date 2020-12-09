@@ -12,6 +12,7 @@
 			</script>
 		<?php
 	}
+
 	else{
 		if ($fileInfo['extension'] == "jpg" OR $fileInfo['extension'] == "png") {
 			$newFilename = $fileInfo['filename'] . "_" . time() . "." . $fileInfo['extension'];
@@ -27,6 +28,7 @@
 				</script>
 			<?php
 		}
+		
 		else{
 			?>
 				<script>
